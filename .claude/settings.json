@@ -1,6 +1,17 @@
 {
   "enabledMcpjsonServers": ["context7", "sequential-thinking"],
   "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 ./.claude/hooks/pre_tool_use_action_router.py"
+          }
+        ]
+      }
+    ],
     "Notification": [
       {
         "matcher": "",
