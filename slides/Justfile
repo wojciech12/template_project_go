@@ -1,0 +1,29 @@
+npx := require("npx")
+jq := require("jq")
+mmdc := require("mmdc")
+
+# Generate marp slides from slides.md
+slides:
+    npx @marp-team/marp-cli@latest slides.md --allow-local-files --pdf --output slides.pdf
+
+# Watch and regenerate slides on changes
+slides-watch:
+    npx @marp-team/marp-cli@latest slides.md --pdf --output slides.pdf --watch
+
+# Generate HTML slides
+slides-html:
+    npx @marp-team/marp-cli@latest slides.md --html --output slides.html
+
+# Generate PNG diagrams from mermaid files in slides/imgs
+diagrams:
+    #!/usr/bin/env bash
+    for file in imgs/*.mmd; do
+        if [ -f "$file" ]; then
+            basename=$(basename "$file" .mmd)
+            mmdc -i "$file" -s 20 -o "imgs/$basename.png"
+        fi
+    done
+
+[group("imgs")]
+html-to-png HTML_FILE:
+    google-chrome --headless --disable-gpu --window-size=800,600 --screenshot={{replace(HTML_FILE, ".html", ".png")}} file://$(pwd)/{{HTML_FILE}}

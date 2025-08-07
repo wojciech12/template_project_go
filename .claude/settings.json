@@ -1,0 +1,35 @@
+{
+  "enabledMcpjsonServers": ["context7", "sequential-thinking"],
+  "hooks": {
+    "Notification": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 .claude/hooks/text_to_speech_piper.py 'Claude waits for your input'"
+          },
+          {
+            "type": "command",
+            "command": "notify-send \"Claude waits for your input\" --urgency=critical --icon=dialog-information --hint=string:desktop-entry:code"
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 .claude/hooks/text_to_speech_piper.py 'Claude finished its work'"
+          },
+          {
+            "type": "command",
+            "command": "notify-send \"Claude finished its work\" --urgency=critical --icon=dialog-information --hint=string:desktop-entry:code"
+          }
+        ]
+      }
+    ]
+  }
+}

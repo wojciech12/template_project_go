@@ -1,0 +1,38 @@
+version: "2"
+linters:
+  default: none
+  enable:
+    - asasalint
+    - errcheck
+    - errorlint
+    - exhaustive
+    - gocritic
+    - goheader
+    - gosec
+    - govet
+    - iface
+    - nilnil
+    - perfsprint
+    - prealloc
+    - predeclared
+    - revive
+    - sloglint
+    - staticcheck
+    - unconvert
+    - unparam
+    - unused
+    - usestdlibvars
+    - usetesting
+
+formatters:
+  enable:
+    - gofmt
+    - goimports
+  settings:
+    gofmt:
+      simplify: false
+      rewrite-rules:
+        - pattern: interface{}
+          replacement: any
+        - pattern: a[b:len(a)]
+          replacement: a[b:]
