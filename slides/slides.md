@@ -140,77 +140,65 @@ Read .claude/memory/* and ... use command ...
 
 ---
 <!-- _class: lead -->
-<p font-size="10">Prompt structure <a href="">Prompt 101<a></p>
+![width:70%, bg left](imgs/prompt_structure.png)
 
-![width:20%](imgs/prompt_structure.png)
+Will help:
 
----
-<!-- _class: lead -->
-# Software Engineer
-
-1. Fast
-2. Compose from large pieces
-3. Stop me if I am going to cut my fingers off
+- Good to watch 1-2 videos about prompt engineering
+- [prompt optimizer](https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/prompt-improver) at claude.ai
+- Claude can review your prompts as well.
 
 ---
 <!-- _class: lead -->
-# AI for IaC use cases
+## Tools
 
-1. Self-service & reducing friction
-2. Planning and pre-mortem
-3. Accelerate IaC & CloudNative development
-4. Security & Compliance
+Claude:
 
----
-<!-- _class: lead -->
-## Accelerate & Democratise
-
-![width:700px](imgs/diagram.png)
+- Hooks
+- Opentelemetry
+- `ccusage`
 
 ---
 <!-- _class: lead -->
-# Best Practices
+## Tools
 
-- Modules repository
-- Example repos for new components
-- Packages easy to consume by Agents
-- Continuously built (and pruned)
+Basic:
 
----
-<!-- _class: lead -->
-# Control
-
-- Enforced policies with, e.g., OPA
-- Standardized tooling, e.g., `tfsec` & `conftest`
-- CI/CD
-- AI-assisted reviews
+- CLI: gh
+- Python - ad hoc
+- mcp - few really worth it 
 
 ---
 <!-- _class: lead -->
-# Experience
+# Accelerating Go Development
 
-- AI instructions and templates
-- subagent configurations
-- mcp server(s)
+- Continuous Effort
 
 ---
 <!-- _class: lead -->
-# Experience
+# Accelerating Go Development
 
-- Make it easy to share prompts and ad-hoc plans and instructions
-- Telemetry
-
----
-<!-- _class: lead -->
-# Continuous Effort
-
-1. AI Retrospectives
-2. Sharing experience and prompts
+- Share the learnings with your team
+- AI retrospectives
 
 ---
 <!-- _class: lead -->
+# Accelerating Go Development
+
+- More verticals in your app, the easier for the model
+
+---
 <!-- _class: lead -->
-<h1>Demo &rarr; Claude for OpenTofu</h1> 
+# Accelerating Go Development
+
+- Model
+- Context
+- Prompt
+- Tools
+
+---
+<!-- _class: lead -->
+<h1>Demo &rarr; Claude</h1> 
 
 [github.com/wojciech12/talks](https://github.com/wojciech12/talks/) & [wbarczynski.pl](https://wbarczynski.pl)
 
