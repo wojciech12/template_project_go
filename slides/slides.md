@@ -74,6 +74,15 @@ Models have strengths and weaknesses:
 
 ---
 <!-- _class: lead -->
+## Plan.md
+
+- Keep the model on the track
+- When it double, create it
+- MUST for anything more complicated
+- Benefits for the model
+
+---
+<!-- _class: lead -->
 ## context7 mcp
 
 - Fetches on-demand documentation and code snippets.
@@ -117,12 +126,12 @@ Read .claude/memory/* and ... use command ...
 
 ---
 <!-- _class: lead -->
-## Plan.md
+## context hygiene
 
-- Keep the model on the track
-- When it double, create it
-- MUST for anything more complicated
-- Benefits for the model
+Once the task is complete:
+
+- Save any essential information.
+- Clear the context using the `/clear` command.
 
 ---
 <!-- _class: lead -->
@@ -130,12 +139,22 @@ Read .claude/memory/* and ... use command ...
 
 - The CLEAR Framework
 - Keywords, e.g., exactly, detaile, [...](https://github.com/wojciech12/notes_ai_for_software_engineering/blob/main/PROMPTS.md)
-- Role-based
+- Role-task format pattern
   
   ```
   You are a [ROLE] with expertise in [DOMAIN].
   Your task is to [SPECIFIC_ACTION].
   ```
+
+---
+<!-- _class: lead -->
+## The CLEAR Framework
+
+- Context: Background information
+- Limitations: Constraints and boundaries
+- Examples: Sample inputs/outputs
+- Action: Specific task to perform
+- Result: Expected deliverable format
 
 ---
 <!-- _class: lead -->
@@ -146,6 +165,16 @@ Will help:
 - Good to watch 1-2 videos about prompt engineering
 - [prompt optimizer](https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/prompt-improver) at claude.ai
 - Claude can review your prompts as well.
+
+---
+<!-- _class: lead -->
+## Prompt
+
+Claude Code:
+
+- ESC - provide more information
+- ESC ESC - cancel
+- Planning mode 
 
 ---
 <!-- _class: lead -->
