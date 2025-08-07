@@ -20,9 +20,9 @@ style: |
 <!-- _class: lead -->
 ## Dev with AI
 
-- Hype vs slot-machine
+- dev < dev with AI
 - Continuously evolving
-- dev < dev + AI
+- A lot of noise
 
 ---
 <!-- _class: lead -->
@@ -45,7 +45,7 @@ style: |
 <!-- _class: lead -->
 ## Models
 
-- Antrophic models lead
+- Anthropic models lead
 - `claude`  &#8594; better results
 - [Cut-off](https://docs.anthropic.com/en/docs/about-claude/models/overview) - march 2025
 
@@ -87,7 +87,7 @@ Models have strengths and weaknesses:
 ## .claude/memory
 Memory (`.claude/memory`):
 
-- Content is not automatically read ([docs](https://docs.anthropic.com/en/docs/claude-code/memory)).
+- Convention, not automatically read ([docs](https://docs.anthropic.com/en/docs/claude-code/memory)).
 - Use for one-off prompts (e.g., `migration_sqlite_to_psql.md`).
 - Store best practices.
 - Save prompts for future use (e.g., `memory-template`).
