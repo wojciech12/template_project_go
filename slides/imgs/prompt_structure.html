@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prompt Structure Diagram</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            margin: 0;
+            background-color: white;
+            padding: 0;
+        }
+        
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: white;
+            padding: 20px;
+        }
+        
+        .prompt-box {
+            margin: 15px 0;
+            padding: 15px 20px;
+            border-radius: 12px;
+            font-size: 16px;
+            font-weight: 500;
+            border: 2px solid rgba(0,0,0,0.1);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        
+        .prompt-box:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+        
+        .box-1 { background-color: #f4c2a7; color: #8b4513; }
+        .box-2 { background-color: #f4d7a7; color: #8b6914; }
+        .box-3 { background-color: #c8e6c9; color: #2e7d32; }
+        .box-4 { background-color: #a8d8d8; color: #00695c; }
+        .box-5 { background-color: #b3d9ff; color: #1565c0; }
+        .box-6 { background-color: #d1c4e9; color: #512da8; }
+        .box-7 { background-color: #ffcdd2; color: #c62828; }
+        .box-8 { background-color: #ffcdd2; color: #c62828; }
+        .box-9 { background-color: #bcaaa4; color: #5d4037; }
+        .box-10 { background-color: #9e9e9e; color: #424242; }
+        
+        .wide { max-width: 500px; }
+        .medium { max-width: 400px; }
+        .narrow { max-width: 300px; }
+        
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="prompt-box box-1 narrow">
+            1. Task context
+        </div>
+        
+        <div class="prompt-box box-2 narrow">
+            2. Tone context
+        </div>
+        
+        <div class="prompt-box box-3 wide">
+            3. Background data, documents, and images
+        </div>
+        
+        <div class="prompt-box box-4 medium">
+            4. Detailed task description & rules
+        </div>
+        
+        <div class="prompt-box box-5 narrow">
+            5. Examples
+        </div>
+        
+        <div class="prompt-box box-6 medium">
+            6. Conversation history
+        </div>
+        
+        <div class="prompt-box box-7 wide">
+            7. Immediate task description or request
+        </div>
+        
+        <div class="prompt-box box-8 wide">
+            8. Thinking step by step / take a deep breath
+        </div>
+        
+        <div class="prompt-box box-9 medium">
+            9. Output formatting
+        </div>
+        
+        <div class="prompt-box box-10 medium">
+            10. Detailed response (if any)
+        </div>
+        
+    </div>
+
+    <script>
+        // Add click interaction to show more details
+        document.querySelectorAll('.prompt-box').forEach((box, index) => {
+            box.addEventListener('click', () => {
+                const details = [
+                    'Defines the overall purpose and domain of the task',
+                    'Sets the communication style and approach',
+                    'Provides context, references, and supporting materials',
+                    'Specifies exact requirements and constraints',
+                    'Shows desired input/output patterns',
+                    'Maintains context from previous interactions',
+                    'The specific task or question to be addressed',
+                    'Encourages systematic thinking and processing',
+                    'Specifies how the response should be structured',
+                    'Any additional response requirements or constraints'
+                ];
+                
+                alert(`Component ${index + 1}: ${details[index]}`);
+            });
+        });
+        
+        // Add some animation on load
+        window.addEventListener('load', () => {
+            const boxes = document.querySelectorAll('.prompt-box');
+            boxes.forEach((box, index) => {
+                setTimeout(() => {
+                    box.style.opacity = '0';
+                    box.style.transform = 'translateY(20px)';
+                    box.style.transition = 'all 0.5s ease';
+                    
+                    setTimeout(() => {
+                        box.style.opacity = '1';
+                        box.style.transform = 'translateY(0)';
+                    }, 100);
+                }, index * 100);
+            });
+        });
+    </script>
+</body>
+</html>

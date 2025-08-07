@@ -18,7 +18,7 @@ style: |
 
 ---
 <!-- _class: lead -->
-# Dev with AI
+## Dev with AI
 
 - Hype vs slot-machine
 - Continuously evolving
@@ -26,7 +26,7 @@ style: |
 
 ---
 <!-- _class: lead -->
-# Goal
+## Goal
 
 - What works for me (so far)
 - Open Discussion
@@ -43,7 +43,7 @@ style: |
 
 ---
 <!-- _class: lead -->
-# Models
+## Models
 
 - Antrophic models lead
 - `claude`  &#8594; better results
@@ -51,7 +51,7 @@ style: |
 
 ---
 <!-- _class: lead -->
-# Models
+## Models
 
 Models have strengths and weaknesses:
 
@@ -88,9 +88,9 @@ Models have strengths and weaknesses:
 
 Memory (`.claude/memory`):
 
-- Not read automatically
+- Not read automatically ([docs](https://docs.anthropic.com/en/docs/claude-code/memory))
 - Use for one-off prompts (e.g., `migration_sqlite_to_psql.md`)
-- Reminders
+- Best practices
 - Keep them for later use (e.g., `memory-template`)
 
 ---
@@ -110,12 +110,39 @@ Memory (`.claude/memory`):
 
 ---
 <!-- _class: lead -->
-# Platform Engineer
+## Context
 
-1. Scaling up = self-service infra/platform
-2. Guardrails
-3. (eventual) best practices
+```
+Read .claude/memory/* and ... use command ... 
+```
 
+---
+<!-- _class: lead -->
+## Plan.md
+
+- Keep the model on the track
+- When it double, create it
+- MUST for anything more complicated
+- Benefits for the model
+
+---
+<!-- _class: lead -->
+## Prompt for Claude Code
+
+- The CLEAR Framework
+- Keywords, e.g., exactly, detaile, [...](https://github.com/wojciech12/notes_ai_for_software_engineering/blob/main/PROMPTS.md)
+- Role-based
+  
+  ```
+  You are a [ROLE] with expertise in [DOMAIN].
+  Your task is to [SPECIFIC_ACTION].
+  ```
+
+---
+<!-- _class: lead -->
+<p font-size="10">Prompt structure <a href="">Prompt 101<a></p>
+
+![width:20%](imgs/prompt_structure.png)
 
 ---
 <!-- _class: lead -->
