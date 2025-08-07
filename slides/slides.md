@@ -185,13 +185,11 @@ Will help:
 
 ---
 <!-- _class: lead -->
-## Tools
+## Choosing Your Tools
 
-Basic:
-
-- CLI: gh
-- Python - ad hoc
-- mcp - few really worth it 
+- **CLI Tools (`gh`, `eza`):** Fast and efficient for common tasks.
+- **Python Scripts:** Best for ad-hoc automation and complex logic.
+- **Mcp** few use cases.
 
 ---
 <!-- _class: lead -->
