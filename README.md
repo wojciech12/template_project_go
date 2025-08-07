@@ -27,7 +27,6 @@
 └── README.md             # This file
 ```
 
-
 ## Configuration
 
 ## Tools

@@ -37,7 +37,7 @@ Git branch _MUST_ follow the name conventions:
 
 ## Git commit message
 
-You *MUST* follow:
+You _MUST_ follow:
 
 - Use imperative mood (e.g., "Add feature" not "Added feature")
 - Keep subject line concise (50 chars or less)
