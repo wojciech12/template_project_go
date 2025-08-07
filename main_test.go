@@ -29,7 +29,7 @@ func TestMain(t *testing.T) {
 				os.Setenv("NAME", tt.envValue)
 				defer os.Unsetenv("NAME")
 			}
-			
+
 			// This is a simple test structure - in a real app you'd extract
 			// the greeting logic into a separate function to test it properly
 		})
