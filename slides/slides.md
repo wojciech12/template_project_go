@@ -168,13 +168,11 @@ Will help:
 
 ---
 <!-- _class: lead -->
-## Prompt
+## Claude Code
 
-Claude Code:
-
-- ESC - provide more information
-- ESC ESC - cancel
-- Planning mode 
+- **`ESC`**: Provide additional information.
+- **`ESC` `ESC`**: Cancel the current action.
+- **Planning Mode**: Deconstruct complex tasks into smaller steps.
 
 ---
 <!-- _class: lead -->
