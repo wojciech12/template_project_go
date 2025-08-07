@@ -68,9 +68,9 @@ Models have strengths and weaknesses:
 <!-- _class: lead -->
 ## CLAUDE.md
 
-- keep it up to date
-- update after new feature*
-- have a command for it
+- Keep it up-to-date.
+- Update it when new features are added.
+- Create a command for easy updates.
 
 ---
 <!-- _class: lead -->
@@ -85,13 +85,12 @@ Models have strengths and weaknesses:
 ---
 <!-- _class: lead -->
 ## .claude/memory
-
 Memory (`.claude/memory`):
 
-- Not read automatically ([docs](https://docs.anthropic.com/en/docs/claude-code/memory))
-- Use for one-off prompts (e.g., `migration_sqlite_to_psql.md`)
-- Best practices
-- Keep them for later use (e.g., `memory-template`)
+- Content is not automatically read ([docs](https://docs.anthropic.com/en/docs/claude-code/memory)).
+- Use for one-off prompts (e.g., `migration_sqlite_to_psql.md`).
+- Store best practices.
+- Save prompts for future use (e.g., `memory-template`).
 
 ---
 <!-- _class: lead -->

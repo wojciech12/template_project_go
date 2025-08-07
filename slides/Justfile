@@ -14,6 +14,9 @@ slides-watch:
 slides-html:
     npx @marp-team/marp-cli@latest slides.md --html --output slides.html
 
+prettier:
+    npx prettier --write .
+
 # Generate PNG diagrams from mermaid files in slides/imgs
 diagrams:
     #!/usr/bin/env bash
