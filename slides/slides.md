@@ -176,13 +176,12 @@ Will help:
 
 ---
 <!-- _class: lead -->
-## Tools
+<!-- _class: lead -->
+## Claude Code Tools
 
-Claude:
-
-- hooks
-- Opentelemetry
-- `ccusage`
+- **Hooks**: Customize behavior with pre/post-action scripts.
+- **OpenTelemetry**: Integrated for observability and performance monitoring.
+- **`ccusage`**: CLI tool to track token usage and costs.
 
 ---
 <!-- _class: lead -->
