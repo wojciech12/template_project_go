@@ -153,7 +153,7 @@ Will help:
 
 Claude:
 
-- Hooks
+- hooks
 - Opentelemetry
 - `ccusage`
 
@@ -166,6 +166,15 @@ Basic:
 - CLI: gh
 - Python - ad hoc
 - mcp - few really worth it 
+
+---
+<!-- _class: lead -->
+## Go-Specific AI Integration
+
+- Go modules and dependency management
+- Strict formatting (`gofmt`, `golangci-lint`) 
+- Testing conventions (`*_test.go`)
+- Interface design patterns
 
 ---
 <!-- _class: lead -->
