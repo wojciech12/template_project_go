@@ -141,6 +141,7 @@ Once the task is complete:
 
 - Save any essential information.
 - Clear the context using the `/clear` command.
+- `git worktree` for isolated environments.
 
 ---
 <!-- _class: lead -->
