@@ -74,6 +74,15 @@ Models have strengths and weaknesses:
 
 ---
 <!-- _class: lead -->
+## CLAUDE.md
+
+For Go-specific context, include:
+
+- Project coding conventions.
+- Go design patterns, with examples (e.g., for error handling).
+
+---
+<!-- _class: lead -->
 ## Plan.md
 
 - Keep the model on the track
