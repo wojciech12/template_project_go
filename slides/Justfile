@@ -26,4 +26,4 @@ diagrams:
 
 [group("imgs")]
 html-to-png HTML_FILE:
-    google-chrome --headless --disable-gpu --window-size=800,600 --screenshot={{replace(HTML_FILE, ".html", ".png")}} file://$(pwd)/{{HTML_FILE}}
+    google-chrome --headless --disable-gpu --window-size=1200,800 --screenshot={{replace(HTML_FILE, ".html", ".png")}} file://$(pwd)/{{HTML_FILE}}
