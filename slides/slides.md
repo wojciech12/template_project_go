@@ -14,7 +14,7 @@ style: |
 
 # Accelerating Go Development with Claude Code: A Pragmatic Approach
 
-<small>Wojciech Barczynski</small>
+<small>Wojciech Barczynski (Unoperate)</small>
 
 ---
 <!-- _class: lead -->
