@@ -62,7 +62,7 @@ Models have strengths and weaknesses:
 <!-- _class: lead -->
 ## Context
 
-![width:900px](imgs/context.png)
+![width:1200px](imgs/context.png)
 
 ---
 <!-- _class: lead -->
