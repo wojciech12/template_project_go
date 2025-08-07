@@ -18,18 +18,18 @@ style: |
 
 ---
 <!-- _class: lead -->
-## Dev with AI
+## Development with AI
 
-- dev < dev with AI
-- Continuously evolving
-- A lot of noise
+- AI boosts productivity.
+- Tools and models evolve rapidly.
+- The challenge is to find what works.
 
 ---
 <!-- _class: lead -->
 ## Goal
 
-- What works for me (so far)
-- Open Discussion
+- Share a pragmatic AI workflow for Go development.
+- Discuss effective strategies and tools.
 
 ---
 <!-- _class: lead -->
