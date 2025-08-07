@@ -187,18 +187,23 @@ Will help:
 <!-- _class: lead -->
 ## Choosing Your Tools
 
-- **CLI Tools (`gh`, `eza`):** Fast and efficient for common tasks.
-- **Python Scripts:** Best for ad-hoc automation and complex logic.
-- **Mcp** few use cases.
+How I approach it:
+
+1. **CLI Tools (`gh`, `eza`, ...):** Fast and efficient for common tasks.
+2. **Python Scripts (with `uv`)**: Best for automation and complex logic.
+3. **Mcp** few use cases.
 
 ---
 <!-- _class: lead -->
-## Go-Specific AI Integration
+## Go-Specific
 
-- Go modules and dependency management
+Claude benefits from quic feedback:
+
+- Strongly typed
 - Strict formatting (`gofmt`, `golangci-lint`) 
 - Testing conventions (`*_test.go`)
-- Interface design patterns
+
+I usually use hooks for it.
 
 ---
 <!-- _class: lead -->
