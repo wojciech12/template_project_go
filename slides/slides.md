@@ -216,26 +216,26 @@ I typically use [Claude hooks](https://github.com/wojciech12/template_project_go
 
 ---
 <!-- _class: lead -->
-# Accelerating Go Development
+## Accelerating Go Development
 
-- Continuous Effort
+- Continuous Process
 
 ---
 <!-- _class: lead -->
-# Accelerating Go Development
+## Accelerating Go Development
 
 - Share the learnings with your team
-- AI retrospectives
+- e.g., AI retrospectives
 
 ---
 <!-- _class: lead -->
-# Accelerating Go Development
+## Accelerating Go Development
 
 - More verticals in your app, the easier for the model
 
 ---
 <!-- _class: lead -->
-# Accelerating Go Development
+## Accelerating Go Development
 
 - Model
 - Context
