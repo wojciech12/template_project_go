@@ -58,6 +58,8 @@ Recommended: [git-delta](https://github.com/dandavison/delta).
    - add a `PIPER_HOME` env variable to your rc file
    - hooks scripts assumes that the voice model is `$PIPER_HOME/models`
 
+3. TBA
+
 ## References
 
 - [claude code CHANGELOG](https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md)
