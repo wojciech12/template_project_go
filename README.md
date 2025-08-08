@@ -62,7 +62,8 @@ Recommended: [git-delta](https://github.com/dandavison/delta).
 
 ## References
 
-- [claude code CHANGELOG](https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md)
-- [https://github.com/fwojciec/pgarrow/](https://github.com/fwojciec/pgarrow/)
-- [notes on AI for software engineering](https://github.com/wojciech12/notes_ai_for_software_engineering/tree/main)
-- [example repo with hooks](https://github.com/disler/claude-code-hooks-mastery)
+- [Claude Code Best Practises](https://www.anthropic.com/engineering/claude-code-best-practices)
+- [Claude code CHANGELOG](https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md)
+- [Example of Golang project](https://github.com/fwojciec/pgarrow/)
+- [Notes on AI for software engineering](https://github.com/wojciech12/notes_ai_for_software_engineering/tree/main)
+- [Example repo with hooks](https://github.com/disler/claude-code-hooks-mastery)
