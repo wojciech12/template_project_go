@@ -207,13 +207,12 @@ How I approach it:
 <!-- _class: lead -->
 ## Go-Specific
 
-Claude benefits from quic feedback:
+Claude benefits from Go's rapid feedback loop:
 
-- Strongly typed
-- Strict formatting (`gofmt`, `golangci-lint`) 
-- Testing conventions (`*_test.go`)
+- **Strongly-typed language**: Catches errors before runtime.
+- **Strict formatting**: Enforced by tools like `gofmt` and `golangci-lint`.
 
-I usually use hooks for it.
+I typically use [Claude hooks](https://github.com/wojciech12/template_project_go/blob/master/.claude/settings.json#L4) to automate these checks.
 
 ---
 <!-- _class: lead -->
