@@ -1,4 +1,10 @@
-# Template Project Golang
+# Template Project Go
+
+- [Slides (PDF)](slides/slides.pdf)
+
+This template is regularly updated as I work on new projects.
+
+If you find this useful, please consider starring this GitHub repository. If something important is missing, [let me know](https://wbarczynski.pl).
 
 ## Project structure
 
@@ -58,12 +64,14 @@ Recommended: [git-delta](https://github.com/dandavison/delta).
    - add a `PIPER_HOME` env variable to your rc file
    - hooks scripts assumes that the voice model is `$PIPER_HOME/models`
 
-3. TBA
+3. OTEL settings, see [docs](https://docs.anthropic.com/en/docs/claude-code/monitoring-usage)
+
+4. TBA
 
 ## References
 
-- [Claude Code Best Practises](https://www.anthropic.com/engineering/claude-code-best-practices)
+- [Claude Code Best Practices](https://www.anthropic.com/engineering/claude-code-best-practices)
 - [Claude code CHANGELOG](https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md)
-- [Example of Golang project](https://github.com/fwojciec/pgarrow/)
+- [Example of Go project](https://github.com/fwojciec/pgarrow/)
 - [Notes on AI for software engineering](https://github.com/wojciech12/notes_ai_for_software_engineering/tree/main)
 - [Example repo with hooks](https://github.com/disler/claude-code-hooks-mastery)
