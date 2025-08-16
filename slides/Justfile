@@ -33,7 +33,7 @@ html-to-png HTML_FILE:
 
 [group("imgs")]
 html-to-png-claude-code HTML_FILE="imgs/claude_code.html":
-    google-chrome --headless --disable-gpu --window-size=800,335 --screenshot={{replace(HTML_FILE, ".html", ".png")}} file://$(pwd)/{{HTML_FILE}}
+    google-chrome --headless --disable-gpu --window-size=700,335 --screenshot={{replace(HTML_FILE, ".html", ".png")}} file://$(pwd)/{{HTML_FILE}}
 
 compile_and_open:
     just slides && open *.pdf

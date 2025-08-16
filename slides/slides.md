@@ -16,10 +16,10 @@ color: #fff
 
 -->
 
-## Accelerating Go Development<br />with Claude Code
+# Accelerating Go Development<br />with Claude Code
 
 ![width:300px](imgs/claude_code.png)![width:250px](imgs/GOPHER_LAPTOP.png) 
-<!-- small>Wojciech Barczynski</small -->
+<small style="font-size:25px">Wojciech Barczynski</small>
 
 ---
 <!-- _class: lead -->
