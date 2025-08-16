@@ -1,6 +1,6 @@
 # Template Project Go
 
-- [Slides (PDF)](slides/slides.pdf)
+- Slides: [pdf](slides/slides.pdf) ([md](slides))
 
 This template is regularly updated as I work on new projects.
 

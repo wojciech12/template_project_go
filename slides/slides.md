@@ -13,7 +13,6 @@ style: |
 <!-- _class: lead 
 backgroundColor: black
 color: #fff
-
 -->
 
 # Accelerating Go Development<br />with Claude Code
@@ -22,7 +21,11 @@ color: #fff
 <small style="font-size:25px">Wojciech Barczynski</small>
 
 ---
-<!-- _class: lead -->
+<!-- _class: lead 
+color: #000
+colorSecondary: #333
+backgroundColor: #fff
+-->
 ## Development with AI
 
 - AI boosts productivity.
@@ -256,3 +259,5 @@ I typically use [Claude hooks](https://github.com/wojciech12/template_project_go
 ---
 <!-- _class: lead -->
 # Thank you
+
+![width:200px](imgs/gofersyrenka.png)

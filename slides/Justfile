@@ -37,3 +37,6 @@ html-to-png-claude-code HTML_FILE="imgs/claude_code.html":
 
 compile_and_open:
     just slides && open *.pdf
+
+slides-pdf-to-png:
+    mkdir -p temp; pdftoppm -png slides.pdf temp/slides.png
