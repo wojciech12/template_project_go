@@ -10,11 +10,16 @@ style: |
   }
 ---
 
-<!-- _class: lead -->
+<!-- _class: lead 
+backgroundColor: black
+color: #fff
 
-# Accelerating Go Development with Claude Code: A Pragmatic Approach
+-->
 
-<small>Wojciech Barczynski (Unoperate)</small>
+## Accelerating Go Development<br />with Claude Code
+
+![width:300px](imgs/claude_code.png)![width:250px](imgs/GOPHER_LAPTOP.png) 
+<!-- small>Wojciech Barczynski</small -->
 
 ---
 <!-- _class: lead -->
