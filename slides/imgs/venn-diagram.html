@@ -1,138 +1,138 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Model, Context, Prompt Venn Diagram</title>
     <script src="https://d3js.org/d3.v7.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/benfred/venn.js/venn.js"></script>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: white;
-            margin: 0;
-            padding: 0;
-        }
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            background: white;
-            border-radius: 0;
-            padding: 0;
-            box-shadow: none;
-        }
-        h1 {
-            text-align: center;
-            color: #333;
-            margin-bottom: 30px;
-        }
-        #venn {
-            text-align: center;
-        }
-        .venntooltip {
-            position: absolute;
-            background: rgba(0,0,0,0.8);
-            color: white;
-            padding: 8px;
-            border-radius: 4px;
-            font-size: 12px;
-            pointer-events: none;
-        }
+      body {
+        font-family: Arial, sans-serif;
+        background-color: white;
+        margin: 0;
+        padding: 0;
+      }
+      .container {
+        max-width: 800px;
+        margin: 0 auto;
+        background: white;
+        border-radius: 0;
+        padding: 0;
+        box-shadow: none;
+      }
+      h1 {
+        text-align: center;
+        color: #333;
+        margin-bottom: 30px;
+      }
+      #venn {
+        text-align: center;
+      }
+      .venntooltip {
+        position: absolute;
+        background: rgba(0, 0, 0, 0.8);
+        color: white;
+        padding: 8px;
+        border-radius: 4px;
+        font-size: 12px;
+        pointer-events: none;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <div class="container">
-        <!--h1>AI System Components</h1-->
-        <div id="venn"></div>
+      <!--h1>AI System Components</h1-->
+      <div id="venn"></div>
     </div>
 
     <script>
-        // Define the sets and their intersections
-        var sets = [
-            {sets: ['Model'], size: 100, label: 'Model'},
-            {sets: ['Context'], size: 100, label: 'Context'},
-            {sets: ['Prompt'], size: 100, label: 'Prompt'},
-            {sets: ['Model', 'Context'], size: 30, label: ''},
-            {sets: ['Model', 'Prompt'], size: 30, label: ''},
-            {sets: ['Context', 'Prompt'], size: 30, label: ''},
-            {sets: ['Model', 'Context', 'Prompt'], size: 15, label: 'AI Dev'}
-        ];
+      // Define the sets and their intersections
+      var sets = [
+        { sets: ["Model"], size: 100, label: "Model" },
+        { sets: ["Context"], size: 100, label: "Context" },
+        { sets: ["Prompt"], size: 100, label: "Prompt" },
+        { sets: ["Model", "Context"], size: 30, label: "" },
+        { sets: ["Model", "Prompt"], size: 30, label: "" },
+        { sets: ["Context", "Prompt"], size: 30, label: "" },
+        { sets: ["Model", "Context", "Prompt"], size: 15, label: "AI Dev" },
+      ];
 
-        // Create the Venn diagram
-        var chart = venn.VennDiagram()
-            .width(600)
-            .height(400);
+      // Create the Venn diagram
+      var chart = venn.VennDiagram().width(600).height(400);
 
-        // Select the div and draw the diagram
-        var div = d3.select("#venn")
-            .datum(sets)
-            .call(chart);
+      // Select the div and draw the diagram
+      var div = d3.select("#venn").datum(sets).call(chart);
 
-        // Style the circles with different colors
-        var colors = {
-            'Model': '#FF6B6B',      // Red
-            'Context': '#4ECDC4',    // Teal
-            'Prompt': '#45B7D1'      // Blue
-        };
+      // Style the circles with different colors
+      var colors = {
+        Model: "#FF6B6B", // Red
+        Context: "#4ECDC4", // Teal
+        Prompt: "#45B7D1", // Blue
+      };
 
-        div.selectAll(".venn-circle path")
-            .style("fill-opacity", 0.3)
-            .style("stroke-width", 2)
-            .style("stroke", function(d) {
-                if (d.sets.length === 1) {
-                    return colors[d.sets[0]];
-                }
-                return "#333";
-            })
-            .style("fill", function(d) {
-                if (d.sets.length === 1) {
-                    return colors[d.sets[0]];
-                }
-                return "#DDD";
-            });
+      div
+        .selectAll(".venn-circle path")
+        .style("fill-opacity", 0.3)
+        .style("stroke-width", 2)
+        .style("stroke", function (d) {
+          if (d.sets.length === 1) {
+            return colors[d.sets[0]];
+          }
+          return "#333";
+        })
+        .style("fill", function (d) {
+          if (d.sets.length === 1) {
+            return colors[d.sets[0]];
+          }
+          return "#DDD";
+        });
 
-        // Add text labels
-        div.selectAll(".venn-circle text")
-            .style("fill", "#333")
-            .style("font-size", "14px")
-            .style("font-weight", "bold");
+      // Add text labels
+      div
+        .selectAll(".venn-circle text")
+        .style("fill", "#333")
+        .style("font-size", "14px")
+        .style("font-weight", "bold");
 
-        // Add interactivity
-        var tooltip = d3.select("body").append("div")
-            .attr("class", "venntooltip")
-            .style("opacity", 0);
+      // Add interactivity
+      var tooltip = d3
+        .select("body")
+        .append("div")
+        .attr("class", "venntooltip")
+        .style("opacity", 0);
 
-        div.selectAll(".venn-circle")
-            .on("mouseover", function(event, d) {
-                tooltip.transition()
-                    .duration(200)
-                    .style("opacity", .9);
-                
-                var tooltipText = "";
-                if (d.sets.length === 1) {
-                    var set = d.sets[0];
-                    if (set === "Model") {
-                        tooltipText = "The AI model architecture, parameters, and training";
-                    } else if (set === "Context") {
-                        tooltipText = "Background information and conversation history";
-                    } else if (set === "Prompt") {
-                        tooltipText = "The specific input or instruction given to the AI";
-                    }
-                } else if (d.sets.length === 2) {
-                    tooltipText = "Intersection of " + d.sets.join(" and ");
-                } else {
-                    tooltipText = "Complete AI system with all components working together";
-                }
-                
-                tooltip.html(tooltipText)
-                    .style("left", (event.pageX + 10) + "px")
-                    .style("top", (event.pageY - 28) + "px");
-            })
-            .on("mouseout", function(d) {
-                tooltip.transition()
-                    .duration(500)
-                    .style("opacity", 0);
-            });
+      div
+        .selectAll(".venn-circle")
+        .on("mouseover", function (event, d) {
+          tooltip.transition().duration(200).style("opacity", 0.9);
+
+          var tooltipText = "";
+          if (d.sets.length === 1) {
+            var set = d.sets[0];
+            if (set === "Model") {
+              tooltipText =
+                "The AI model architecture, parameters, and training";
+            } else if (set === "Context") {
+              tooltipText = "Background information and conversation history";
+            } else if (set === "Prompt") {
+              tooltipText = "The specific input or instruction given to the AI";
+            }
+          } else if (d.sets.length === 2) {
+            tooltipText = "Intersection of " + d.sets.join(" and ");
+          } else {
+            tooltipText =
+              "Complete AI system with all components working together";
+          }
+
+          tooltip
+            .html(tooltipText)
+            .style("left", event.pageX + 10 + "px")
+            .style("top", event.pageY - 28 + "px");
+        })
+        .on("mouseout", function (d) {
+          tooltip.transition().duration(500).style("opacity", 0);
+        });
     </script>
-</body>
+  </body>
 </html>

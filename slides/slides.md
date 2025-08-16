@@ -10,22 +10,24 @@ style: |
   }
 ---
 
-<!-- _class: lead 
+<!-- _class: lead
 backgroundColor: black
 color: #fff
 -->
 
 # Accelerating Go Development<br />with Claude Code
 
-![width:300px](imgs/claude_code.png)![width:250px](imgs/GOPHER_LAPTOP.png) 
+![width:300px](imgs/claude_code.png)![width:250px](imgs/GOPHER_LAPTOP.png)
 <small style="font-size:25px">Wojciech Barczynski</small>
 
 ---
-<!-- _class: lead 
+
+<!-- _class: lead
 color: #000
 colorSecondary: #333
 backgroundColor: #fff
 -->
+
 ## Development with AI
 
 - AI boosts productivity.
@@ -33,32 +35,40 @@ backgroundColor: #fff
 - The challenge is to find what works.
 
 ---
+
 <!-- _class: lead -->
+
 ## Goal
 
 - Share a pragmatic AI workflow for Go development.
 - Discuss effective strategies and tools.
 
 ---
+
 <!-- _class: lead -->
 
 ![width:900px](imgs/venn-diagram.png)
 
 ---
+
 <!-- _class: lead -->
 
 <p size="30"><b>+ Tools</b></p>
 
 ---
+
 <!-- _class: lead -->
+
 ## Models
 
 - Anthropic models lead
-- `claude`  &#8594; better results
+- `claude` &#8594; better results
 - [Cut-off](https://docs.anthropic.com/en/docs/about-claude/models/overview) - march 2025
 
 ---
+
 <!-- _class: lead -->
+
 ## Models
 
 Models have strengths and weaknesses:
@@ -67,13 +77,17 @@ Models have strengths and weaknesses:
 - Gemini
 
 ---
+
 <!-- _class: lead -->
+
 ## Context
 
 ![width:1200px](imgs/context.png)
 
 ---
+
 <!-- _class: lead -->
+
 ## CLAUDE.md
 
 - Keep it up-to-date.
@@ -81,7 +95,9 @@ Models have strengths and weaknesses:
 - Create a command for easy updates.
 
 ---
+
 <!-- _class: lead -->
+
 ## CLAUDE.md
 
 For Go-specific context, include:
@@ -90,7 +106,9 @@ For Go-specific context, include:
 - Go design patterns, with examples (e.g., for error handling).
 
 ---
+
 <!-- _class: lead -->
+
 ## Plan.md
 
 - Keep the model on the track
@@ -99,7 +117,9 @@ For Go-specific context, include:
 - Benefits for the model
 
 ---
+
 <!-- _class: lead -->
+
 ## context7 mcp
 
 - Fetches on-demand documentation and code snippets.
@@ -109,8 +129,11 @@ For Go-specific context, include:
   - Or save to `docs-ai/`.
 
 ---
+
 <!-- _class: lead -->
+
 ## .claude/memory
+
 Memory (`.claude/memory`):
 
 - Convention, not automatically read ([docs](https://docs.anthropic.com/en/docs/claude-code/memory)).
@@ -119,14 +142,18 @@ Memory (`.claude/memory`):
 - Save prompts for future use (e.g., `memory-template`).
 
 ---
+
 <!-- _class: lead -->
+
 ## docs-ai / ai-docs
 
 - More extensive docs and larger mds.
 - You can link them in `CLAUDE.md`.
 
 ---
+
 <!-- _class: lead -->
+
 ## Repository
 
 - Modular design
@@ -134,15 +161,19 @@ Memory (`.claude/memory`):
 - `CLAUDE.md` files in subfolders
 
 ---
+
 <!-- _class: lead -->
+
 ## Context
 
 ```
-Read .claude/memory/* and ... use command ... 
+Read .claude/memory/* and ... use command ...
 ```
 
 ---
+
 <!-- _class: lead -->
+
 ## context hygiene
 
 Once the task is complete:
@@ -152,20 +183,24 @@ Once the task is complete:
 - `git worktree` for isolated environments.
 
 ---
+
 <!-- _class: lead -->
+
 ## Prompt for Claude Code
 
 - The CLEAR Framework
 - Keywords, e.g., exactly, detaile, [...](https://github.com/wojciech12/notes_ai_for_software_engineering/blob/main/PROMPTS.md)
 - Role-task format pattern
-  
+
   ```
   You are a [ROLE] with expertise in [DOMAIN].
   Your task is to [SPECIFIC_ACTION].
   ```
 
 ---
+
 <!-- _class: lead -->
+
 ## The CLEAR Framework
 
 - Context: Background information
@@ -175,7 +210,9 @@ Once the task is complete:
 - Result: Expected deliverable format
 
 ---
+
 <!-- _class: lead -->
+
 ![width:70%, bg left](imgs/prompt_structure.png)
 
 Will help:
@@ -185,7 +222,9 @@ Will help:
 - Claude can review your prompts as well.
 
 ---
+
 <!-- _class: lead -->
+
 ## Claude Code
 
 - **`ESC`**: Provide additional information.
@@ -193,8 +232,10 @@ Will help:
 - **Planning Mode**: Deconstruct complex tasks into smaller steps.
 
 ---
+
 <!-- _class: lead -->
 <!-- _class: lead -->
+
 ## Claude Code Tools
 
 - **Hooks**: Customize behavior with pre/post-action scripts.
@@ -202,7 +243,9 @@ Will help:
 - **`ccusage`**: CLI tool to track token usage and costs.
 
 ---
+
 <!-- _class: lead -->
+
 ## Choosing Your Tools
 
 How I approach it:
@@ -212,7 +255,9 @@ How I approach it:
 3. **Mcp** few use cases.
 
 ---
+
 <!-- _class: lead -->
+
 ## Go-Specific
 
 Claude benefits from Go's rapid feedback loop:
@@ -223,26 +268,34 @@ Claude benefits from Go's rapid feedback loop:
 I typically use [Claude hooks](https://github.com/wojciech12/template_project_go/blob/master/.claude/settings.json#L4) to automate these checks.
 
 ---
+
 <!-- _class: lead -->
+
 ## Accelerating Go Development
 
 - Continuous Process
 
 ---
+
 <!-- _class: lead -->
+
 ## Accelerating Go Development
 
 - Share the learnings with your team
 - e.g., AI retrospectives
 
 ---
+
 <!-- _class: lead -->
+
 ## Accelerating Go Development
 
 - More verticals in your app, the easier for the model
 
 ---
+
 <!-- _class: lead -->
+
 ## Accelerating Go Development
 
 - Model
@@ -251,13 +304,16 @@ I typically use [Claude hooks](https://github.com/wojciech12/template_project_go
 - Tools
 
 ---
+
 <!-- _class: lead -->
-<h1>Demo &rarr; Claude</h1> 
+<h1>Demo &rarr; Claude</h1>
 
 [github.com/wojciech12/talks](https://github.com/wojciech12/talks/) & [wbarczynski.pl](https://wbarczynski.pl)
 
 ---
+
 <!-- _class: lead -->
+
 # Thank you
 
 ![width:200px](imgs/gofersyrenka.png)

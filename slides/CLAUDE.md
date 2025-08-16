@@ -9,6 +9,7 @@ This directory contains Marp presentation slides for "Accelerating Go Developmen
 # Presentation Content
 
 The slides cover:
+
 - AI development realities (hype vs practical application)
 - Model selection and capabilities (Anthropic models, Claude Code, Gemini)
 - Context management strategies (CLAUDE.md, .claude/memory, docs-ai/)
@@ -26,7 +27,8 @@ The slides cover:
 # File Structure
 
 - `slides.md`: Main presentation file in Marp format with Gaia theme
-- `slides.pdf`: Generated PDF version of the presentation  
+- `slides.pdf`: Generated PDF version of the presentation
+- `slides.html`: Generated HTML version of the presentation
 - `imgs/`: Directory containing presentation diagrams and images
   - `context.png`: Context management visualization
   - `diagram.png`: AI-assisted development workflow
@@ -36,6 +38,7 @@ The slides cover:
 # Marp Configuration
 
 The presentation uses:
+
 - **Theme**: Gaia
 - **Colors**: Black text (#000) on white background (#fff)
 - **Layout**: Lead class for centered content on most slides
@@ -44,6 +47,7 @@ The presentation uses:
 # Content Guidelines
 
 When editing slides:
+
 - Use `<!-- _class: lead -->` for centered slide layouts
 - Keep bullet points concise and action-oriented
 - Use consistent image sizing (e.g., `width:900px` for diagrams)
@@ -60,6 +64,7 @@ When editing slides:
 # Presentation Flow
 
 The talk is structured as:
+
 1. Opening: Setting realistic expectations about AI development
 2. Core concepts: Models, context, prompts, tools
 3. Practical implementation: Repository structure, workflows
@@ -69,6 +74,6 @@ The talk is structured as:
 # Key Messages
 
 - Emphasize collaboration between human and AI
-- Share practical experiences over theoretical benefits  
+- Share practical experiences over theoretical benefits
 - Encourage audience participation and knowledge sharing
 - Focus on continuous learning and adaptation in AI-assisted development

@@ -1,168 +1,544 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Claude Code</title>
     <style>
-        body {
-            margin: 0;
-            padding: 0;
-            background-color: black;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            min-height: 50vh;
-            gap: 10px;
-        }
-        
-        .word {
-            display: flex;
-            gap: 10px;
-        }
-        
-        .letter {
-            display: grid;
-            gap: 1px;
-        }
-        
-        .pixel {
-            width: 12px;
-            height: 12px;
-            background-color: #C97456;
-            border: 1px solid #000;
-        }
-        
-        .empty {
-            width: 12px;
-            height: 12px;
-        }
+      body {
+        margin: 0;
+        padding: 0;
+        background-color: black;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 50vh;
+        gap: 10px;
+      }
+
+      .word {
+        display: flex;
+        gap: 10px;
+      }
+
+      .letter {
+        display: grid;
+        gap: 1px;
+      }
+
+      .pixel {
+        width: 12px;
+        height: 12px;
+        background-color: #c97456;
+        border: 1px solid #000;
+      }
+
+      .empty {
+        width: 12px;
+        height: 12px;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <div class="word">
-        <!-- C -->
-        <div class="letter" style="grid-template-columns: repeat(6, 1fr);">
-            <div class="empty"></div><div class="pixel"></div><div class="pixel"></div><div class="pixel"></div><div class="pixel"></div><div class="empty"></div>
-            <div class="pixel"></div><div class="pixel"></div><div class="empty"></div><div class="empty"></div><div class="pixel"></div><div class="pixel"></div>
-            <div class="pixel"></div><div class="pixel"></div><div class="empty"></div><div class="empty"></div><div class="empty"></div><div class="empty"></div>
-            <div class="pixel"></div><div class="pixel"></div><div class="empty"></div><div class="empty"></div><div class="empty"></div><div class="empty"></div>
-            <div class="pixel"></div><div class="pixel"></div><div class="empty"></div><div class="empty"></div><div class="empty"></div><div class="empty"></div>
-            <div class="pixel"></div><div class="pixel"></div><div class="empty"></div><div class="empty"></div><div class="empty"></div><div class="empty"></div>
-            <div class="pixel"></div><div class="pixel"></div><div class="empty"></div><div class="empty"></div><div class="pixel"></div><div class="pixel"></div>
-            <div class="empty"></div><div class="pixel"></div><div class="pixel"></div><div class="pixel"></div><div class="pixel"></div><div class="empty"></div>
-        </div>
-        
-        <!-- L -->
-        <div class="letter" style="grid-template-columns: repeat(5, 1fr);">
-            <div class="pixel"></div><div class="pixel"></div><div class="empty"></div><div class="empty"></div><div class="empty"></div>
-            <div class="pixel"></div><div class="pixel"></div><div class="empty"></div><div class="empty"></div><div class="empty"></div>
-            <div class="pixel"></div><div class="pixel"></div><div class="empty"></div><div class="empty"></div><div class="empty"></div>
-            <div class="pixel"></div><div class="pixel"></div><div class="empty"></div><div class="empty"></div><div class="empty"></div>
-            <div class="pixel"></div><div class="pixel"></div><div class="empty"></div><div class="empty"></div><div class="empty"></div>
-            <div class="pixel"></div><div class="pixel"></div><div class="empty"></div><div class="empty"></div><div class="empty"></div>
-            <div class="pixel"></div><div class="pixel"></div><div class="pixel"></div><div class="pixel"></div><div class="pixel"></div>
-            <div class="pixel"></div><div class="pixel"></div><div class="pixel"></div><div class="pixel"></div><div class="pixel"></div>
-        </div>
-        
-        <!-- A -->
-        <div class="letter" style="grid-template-columns: repeat(6, 1fr);">
-            <div class="empty"></div><div class="pixel"></div><div class="pixel"></div><div class="pixel"></div><div class="pixel"></div><div class="empty"></div>
-            <div class="pixel"></div><div class="pixel"></div><div class="empty"></div><div class="empty"></div><div class="pixel"></div><div class="pixel"></div>
-            <div class="pixel"></div><div class="pixel"></div><div class="empty"></div><div class="empty"></div><div class="pixel"></div><div class="pixel"></div>
-            <div class="pixel"></div><div class="pixel"></div><div class="empty"></div><div class="empty"></div><div class="pixel"></div><div class="pixel"></div>
-            <div class="pixel"></div><div class="pixel"></div><div class="pixel"></div><div class="pixel"></div><div class="pixel"></div><div class="pixel"></div>
-            <div class="pixel"></div><div class="pixel"></div><div class="empty"></div><div class="empty"></div><div class="pixel"></div><div class="pixel"></div>
-            <div class="pixel"></div><div class="pixel"></div><div class="empty"></div><div class="empty"></div><div class="pixel"></div><div class="pixel"></div>
-            <div class="pixel"></div><div class="pixel"></div><div class="empty"></div><div class="empty"></div><div class="pixel"></div><div class="pixel"></div>
-        </div>
-        
-        <!-- U -->
-        <div class="letter" style="grid-template-columns: repeat(6, 1fr);">
-            <div class="pixel"></div><div class="pixel"></div><div class="empty"></div><div class="empty"></div><div class="pixel"></div><div class="pixel"></div>
-            <div class="pixel"></div><div class="pixel"></div><div class="empty"></div><div class="empty"></div><div class="pixel"></div><div class="pixel"></div>
-            <div class="pixel"></div><div class="pixel"></div><div class="empty"></div><div class="empty"></div><div class="pixel"></div><div class="pixel"></div>
-            <div class="pixel"></div><div class="pixel"></div><div class="empty"></div><div class="empty"></div><div class="pixel"></div><div class="pixel"></div>
-            <div class="pixel"></div><div class="pixel"></div><div class="empty"></div><div class="empty"></div><div class="pixel"></div><div class="pixel"></div>
-            <div class="pixel"></div><div class="pixel"></div><div class="empty"></div><div class="empty"></div><div class="pixel"></div><div class="pixel"></div>
-            <div class="pixel"></div><div class="pixel"></div><div class="empty"></div><div class="empty"></div><div class="pixel"></div><div class="pixel"></div>
-            <div class="empty"></div><div class="pixel"></div><div class="pixel"></div><div class="pixel"></div><div class="pixel"></div><div class="empty"></div>
-        </div>
-        
-        <!-- D -->
-        <div class="letter" style="grid-template-columns: repeat(6, 1fr);">
-            <div class="pixel"></div><div class="pixel"></div><div class="pixel"></div><div class="pixel"></div><div class="empty"></div><div class="empty"></div>
-            <div class="pixel"></div><div class="pixel"></div><div class="empty"></div><div class="pixel"></div><div class="pixel"></div><div class="empty"></div>
-            <div class="pixel"></div><div class="pixel"></div><div class="empty"></div><div class="empty"></div><div class="pixel"></div><div class="pixel"></div>
-            <div class="pixel"></div><div class="pixel"></div><div class="empty"></div><div class="empty"></div><div class="pixel"></div><div class="pixel"></div>
-            <div class="pixel"></div><div class="pixel"></div><div class="empty"></div><div class="empty"></div><div class="pixel"></div><div class="pixel"></div>
-            <div class="pixel"></div><div class="pixel"></div><div class="empty"></div><div class="empty"></div><div class="pixel"></div><div class="pixel"></div>
-            <div class="pixel"></div><div class="pixel"></div><div class="empty"></div><div class="pixel"></div><div class="pixel"></div><div class="empty"></div>
-            <div class="pixel"></div><div class="pixel"></div><div class="pixel"></div><div class="pixel"></div><div class="empty"></div><div class="empty"></div>
-        </div>
-        
-        <!-- E -->
-        <div class="letter" style="grid-template-columns: repeat(5, 1fr);">
-            <div class="pixel"></div><div class="pixel"></div><div class="pixel"></div><div class="pixel"></div><div class="pixel"></div>
-            <div class="pixel"></div><div class="pixel"></div><div class="empty"></div><div class="empty"></div><div class="empty"></div>
-            <div class="pixel"></div><div class="pixel"></div><div class="empty"></div><div class="empty"></div><div class="empty"></div>
-            <div class="pixel"></div><div class="pixel"></div><div class="pixel"></div><div class="pixel"></div><div class="empty"></div>
-            <div class="pixel"></div><div class="pixel"></div><div class="empty"></div><div class="empty"></div><div class="empty"></div>
-            <div class="pixel"></div><div class="pixel"></div><div class="empty"></div><div class="empty"></div><div class="empty"></div>
-            <div class="pixel"></div><div class="pixel"></div><div class="empty"></div><div class="empty"></div><div class="empty"></div>
-            <div class="pixel"></div><div class="pixel"></div><div class="pixel"></div><div class="pixel"></div><div class="pixel"></div>
-        </div>
+      <!-- C -->
+      <div class="letter" style="grid-template-columns: repeat(6, 1fr)">
+        <div class="empty"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="empty"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="empty"></div>
+        <div class="empty"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="empty"></div>
+        <div class="empty"></div>
+        <div class="empty"></div>
+        <div class="empty"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="empty"></div>
+        <div class="empty"></div>
+        <div class="empty"></div>
+        <div class="empty"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="empty"></div>
+        <div class="empty"></div>
+        <div class="empty"></div>
+        <div class="empty"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="empty"></div>
+        <div class="empty"></div>
+        <div class="empty"></div>
+        <div class="empty"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="empty"></div>
+        <div class="empty"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="empty"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="empty"></div>
+      </div>
+
+      <!-- L -->
+      <div class="letter" style="grid-template-columns: repeat(5, 1fr)">
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="empty"></div>
+        <div class="empty"></div>
+        <div class="empty"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="empty"></div>
+        <div class="empty"></div>
+        <div class="empty"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="empty"></div>
+        <div class="empty"></div>
+        <div class="empty"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="empty"></div>
+        <div class="empty"></div>
+        <div class="empty"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="empty"></div>
+        <div class="empty"></div>
+        <div class="empty"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="empty"></div>
+        <div class="empty"></div>
+        <div class="empty"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+      </div>
+
+      <!-- A -->
+      <div class="letter" style="grid-template-columns: repeat(6, 1fr)">
+        <div class="empty"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="empty"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="empty"></div>
+        <div class="empty"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="empty"></div>
+        <div class="empty"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="empty"></div>
+        <div class="empty"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="empty"></div>
+        <div class="empty"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="empty"></div>
+        <div class="empty"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="empty"></div>
+        <div class="empty"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+      </div>
+
+      <!-- U -->
+      <div class="letter" style="grid-template-columns: repeat(6, 1fr)">
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="empty"></div>
+        <div class="empty"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="empty"></div>
+        <div class="empty"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="empty"></div>
+        <div class="empty"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="empty"></div>
+        <div class="empty"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="empty"></div>
+        <div class="empty"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="empty"></div>
+        <div class="empty"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="empty"></div>
+        <div class="empty"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="empty"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="empty"></div>
+      </div>
+
+      <!-- D -->
+      <div class="letter" style="grid-template-columns: repeat(6, 1fr)">
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="empty"></div>
+        <div class="empty"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="empty"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="empty"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="empty"></div>
+        <div class="empty"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="empty"></div>
+        <div class="empty"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="empty"></div>
+        <div class="empty"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="empty"></div>
+        <div class="empty"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="empty"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="empty"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="empty"></div>
+        <div class="empty"></div>
+      </div>
+
+      <!-- E -->
+      <div class="letter" style="grid-template-columns: repeat(5, 1fr)">
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="empty"></div>
+        <div class="empty"></div>
+        <div class="empty"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="empty"></div>
+        <div class="empty"></div>
+        <div class="empty"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="empty"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="empty"></div>
+        <div class="empty"></div>
+        <div class="empty"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="empty"></div>
+        <div class="empty"></div>
+        <div class="empty"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="empty"></div>
+        <div class="empty"></div>
+        <div class="empty"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+      </div>
     </div>
-    
+
     <div class="word">
-        <!-- C -->
-        <div class="letter" style="grid-template-columns: repeat(6, 1fr);">
-            <div class="empty"></div><div class="pixel"></div><div class="pixel"></div><div class="pixel"></div><div class="pixel"></div><div class="empty"></div>
-            <div class="pixel"></div><div class="pixel"></div><div class="empty"></div><div class="empty"></div><div class="pixel"></div><div class="pixel"></div>
-            <div class="pixel"></div><div class="pixel"></div><div class="empty"></div><div class="empty"></div><div class="empty"></div><div class="empty"></div>
-            <div class="pixel"></div><div class="pixel"></div><div class="empty"></div><div class="empty"></div><div class="empty"></div><div class="empty"></div>
-            <div class="pixel"></div><div class="pixel"></div><div class="empty"></div><div class="empty"></div><div class="empty"></div><div class="empty"></div>
-            <div class="pixel"></div><div class="pixel"></div><div class="empty"></div><div class="empty"></div><div class="empty"></div><div class="empty"></div>
-            <div class="pixel"></div><div class="pixel"></div><div class="empty"></div><div class="empty"></div><div class="pixel"></div><div class="pixel"></div>
-            <div class="empty"></div><div class="pixel"></div><div class="pixel"></div><div class="pixel"></div><div class="pixel"></div><div class="empty"></div>
-        </div>
-        
-        <!-- O -->
-        <div class="letter" style="grid-template-columns: repeat(6, 1fr);">
-            <div class="empty"></div><div class="pixel"></div><div class="pixel"></div><div class="pixel"></div><div class="pixel"></div><div class="empty"></div>
-            <div class="pixel"></div><div class="pixel"></div><div class="empty"></div><div class="empty"></div><div class="pixel"></div><div class="pixel"></div>
-            <div class="pixel"></div><div class="pixel"></div><div class="empty"></div><div class="empty"></div><div class="pixel"></div><div class="pixel"></div>
-            <div class="pixel"></div><div class="pixel"></div><div class="empty"></div><div class="empty"></div><div class="pixel"></div><div class="pixel"></div>
-            <div class="pixel"></div><div class="pixel"></div><div class="empty"></div><div class="empty"></div><div class="pixel"></div><div class="pixel"></div>
-            <div class="pixel"></div><div class="pixel"></div><div class="empty"></div><div class="empty"></div><div class="pixel"></div><div class="pixel"></div>
-            <div class="pixel"></div><div class="pixel"></div><div class="empty"></div><div class="empty"></div><div class="pixel"></div><div class="pixel"></div>
-            <div class="empty"></div><div class="pixel"></div><div class="pixel"></div><div class="pixel"></div><div class="pixel"></div><div class="empty"></div>
-        </div>
-        
-        <!-- D -->
-        <div class="letter" style="grid-template-columns: repeat(6, 1fr);">
-            <div class="pixel"></div><div class="pixel"></div><div class="pixel"></div><div class="pixel"></div><div class="empty"></div><div class="empty"></div>
-            <div class="pixel"></div><div class="pixel"></div><div class="empty"></div><div class="pixel"></div><div class="pixel"></div><div class="empty"></div>
-            <div class="pixel"></div><div class="pixel"></div><div class="empty"></div><div class="empty"></div><div class="pixel"></div><div class="pixel"></div>
-            <div class="pixel"></div><div class="pixel"></div><div class="empty"></div><div class="empty"></div><div class="pixel"></div><div class="pixel"></div>
-            <div class="pixel"></div><div class="pixel"></div><div class="empty"></div><div class="empty"></div><div class="pixel"></div><div class="pixel"></div>
-            <div class="pixel"></div><div class="pixel"></div><div class="empty"></div><div class="empty"></div><div class="pixel"></div><div class="pixel"></div>
-            <div class="pixel"></div><div class="pixel"></div><div class="empty"></div><div class="pixel"></div><div class="pixel"></div><div class="empty"></div>
-            <div class="pixel"></div><div class="pixel"></div><div class="pixel"></div><div class="pixel"></div><div class="empty"></div><div class="empty"></div>
-        </div>
-        
-        <!-- E -->
-        <div class="letter" style="grid-template-columns: repeat(5, 1fr);">
-            <div class="pixel"></div><div class="pixel"></div><div class="pixel"></div><div class="pixel"></div><div class="pixel"></div>
-            <div class="pixel"></div><div class="pixel"></div><div class="empty"></div><div class="empty"></div><div class="empty"></div>
-            <div class="pixel"></div><div class="pixel"></div><div class="empty"></div><div class="empty"></div><div class="empty"></div>
-            <div class="pixel"></div><div class="pixel"></div><div class="pixel"></div><div class="pixel"></div><div class="empty"></div>
-            <div class="pixel"></div><div class="pixel"></div><div class="empty"></div><div class="empty"></div><div class="empty"></div>
-            <div class="pixel"></div><div class="pixel"></div><div class="empty"></div><div class="empty"></div><div class="empty"></div>
-            <div class="pixel"></div><div class="pixel"></div><div class="empty"></div><div class="empty"></div><div class="empty"></div>
-            <div class="pixel"></div><div class="pixel"></div><div class="pixel"></div><div class="pixel"></div><div class="pixel"></div>
-        </div>
+      <!-- C -->
+      <div class="letter" style="grid-template-columns: repeat(6, 1fr)">
+        <div class="empty"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="empty"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="empty"></div>
+        <div class="empty"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="empty"></div>
+        <div class="empty"></div>
+        <div class="empty"></div>
+        <div class="empty"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="empty"></div>
+        <div class="empty"></div>
+        <div class="empty"></div>
+        <div class="empty"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="empty"></div>
+        <div class="empty"></div>
+        <div class="empty"></div>
+        <div class="empty"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="empty"></div>
+        <div class="empty"></div>
+        <div class="empty"></div>
+        <div class="empty"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="empty"></div>
+        <div class="empty"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="empty"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="empty"></div>
+      </div>
+
+      <!-- O -->
+      <div class="letter" style="grid-template-columns: repeat(6, 1fr)">
+        <div class="empty"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="empty"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="empty"></div>
+        <div class="empty"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="empty"></div>
+        <div class="empty"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="empty"></div>
+        <div class="empty"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="empty"></div>
+        <div class="empty"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="empty"></div>
+        <div class="empty"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="empty"></div>
+        <div class="empty"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="empty"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="empty"></div>
+      </div>
+
+      <!-- D -->
+      <div class="letter" style="grid-template-columns: repeat(6, 1fr)">
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="empty"></div>
+        <div class="empty"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="empty"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="empty"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="empty"></div>
+        <div class="empty"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="empty"></div>
+        <div class="empty"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="empty"></div>
+        <div class="empty"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="empty"></div>
+        <div class="empty"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="empty"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="empty"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="empty"></div>
+        <div class="empty"></div>
+      </div>
+
+      <!-- E -->
+      <div class="letter" style="grid-template-columns: repeat(5, 1fr)">
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="empty"></div>
+        <div class="empty"></div>
+        <div class="empty"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="empty"></div>
+        <div class="empty"></div>
+        <div class="empty"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="empty"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="empty"></div>
+        <div class="empty"></div>
+        <div class="empty"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="empty"></div>
+        <div class="empty"></div>
+        <div class="empty"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="empty"></div>
+        <div class="empty"></div>
+        <div class="empty"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+      </div>
     </div>
-</body>
+  </body>
 </html>
