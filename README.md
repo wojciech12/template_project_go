@@ -52,6 +52,8 @@ Recommended: [git-delta](https://github.com/dandavison/delta).
 
 ### Claude Code
 
+0. Manage your node with [nvm](https://github.com/nvm-sh/nvm)
+
 1. `~/.claude/settings.json`:
 
    ```json
