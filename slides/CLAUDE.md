@@ -18,6 +18,7 @@ This directory contains Marp presentation slides for "Accelerating Go Developmen
 - `just compile_and_open`: Build slides and open PDF automatically
 
 **Image Generation Commands:**
+
 - `just html-to-png HTML_FILE`: Convert HTML file to PNG screenshot
 - `just slides-pdf-to-png`: Convert slides PDF to individual PNG files
 
@@ -32,19 +33,22 @@ This directory contains Marp presentation slides for "Accelerating Go Developmen
 # Images and Diagrams
 
 **Current image assets in imgs/:**
+
 - `claude_code.png`: Claude Code logo for title slide
-- `GOPHER_LAPTOP.png`: Go mascot for title slide  
+- `GOPHER_LAPTOP.png`: Go mascot for title slide
 - `gofersyrenka.png`: Go mascot for thank you slide
 - `context.png`: Context management visualization (generated from context.mmd)
 - `prompt_structure.png`: Prompt engineering structure diagram
 - `venn-diagram.png`: Intersection of effective AI development practices
 
 **HTML source files for image generation:**
+
 - `claude_code.html`: Source for generating claude_code.png
 - `prompt_structure.html`: Source for generating prompt_structure.png
 - `venn-diagram.html`: Source for generating venn-diagram.png
 
 **Mermaid source files:**
+
 - `context.mmd`: Source for context.png diagram
 
 # Marp Configuration
@@ -61,11 +65,12 @@ This directory contains Marp presentation slides for "Accelerating Go Developmen
 **CRITICAL: Follow this workflow when making changes:**
 
 1. **Edit slides.md** - Make content changes
-2. **Run `just prettier`** - Format the file  
+2. **Run `just prettier`** - Format the file
 3. **Run `just slides`** - Generate updated PDF
 4. **Review slides.pdf** - Verify changes appear correctly
 
 **When adding new diagrams:**
+
 1. Create `.mmd` file in imgs/ for mermaid diagrams
 2. Run `just diagrams` to generate PNG
 3. Reference in slides.md with appropriate width
@@ -84,7 +89,8 @@ This directory contains Marp presentation slides for "Accelerating Go Developmen
 # Presentation Content Focus
 
 **The presentation covers practical AI development:**
-- AI development realities (hype vs practical application)  
+
+- AI development realities (hype vs practical application)
 - Model selection and capabilities (Claude Code, Gemini)
 - Context management strategies (CLAUDE.md, .claude/memory, docs-ai/)
 - Prompt engineering techniques (CLEAR framework, role-based prompts)
@@ -92,6 +98,7 @@ This directory contains Marp presentation slides for "Accelerating Go Developmen
 - Tools and workflow optimization
 
 **Key messaging priorities:**
+
 - Emphasize human-AI collaboration
 - Share practical experiences over theoretical benefits
 - Encourage audience participation and knowledge sharing

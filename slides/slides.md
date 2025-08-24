@@ -176,11 +176,12 @@ Read .claude/memory/* and ... use command ...
 
 ## context hygiene
 
-Once the task is complete:
+Once the task is complete or a session is too-long:
 
-- Save any essential information.
-- Clear the context using the `/clear` command.
-- `git worktree` for isolated environments.
+- Save any essential information
+- Clear the context using the `/clear` command
+- `git worktree` for isolated environments
+- `/context`
 
 ---
 
@@ -317,3 +318,19 @@ I typically use [Claude hooks](https://github.com/wojciech12/template_project_go
 # Thank you
 
 ![width:200px](imgs/gofersyrenka.png)
+
+---
+
+<!-- _class: lead -->
+
+# Backup Slides
+
+---
+
+<!-- _class: lead -->
+
+# Prompt Enginering
+
+- [Prompt Best Practices](https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/be-clear-and-direct)
+- [Prompt library](https://docs.anthropic.com/en/resources/prompt-library/corporate-clairvoyant)
+- [CO-STAR](https://towardsdatascience.com/how-i-won-singapores-gpt-4-prompt-engineering-competition-34c195a93d41/)
