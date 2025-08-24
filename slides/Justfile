@@ -14,6 +14,9 @@ slides-watch:
 slides-html:
     npx @marp-team/marp-cli@latest slides.md --html --output slides.html
 
+fmt:
+    npx prettier --write *.md
+
 prettier:
     npx prettier --write .
 
@@ -29,11 +32,11 @@ diagrams:
 
 [group("imgs")]
 html-to-png HTML_FILE:
-    google-chrome --headless --disable-gpu --window-size=1200,800 --screenshot={{replace(HTML_FILE, ".html", ".png")}} file://$(pwd)/{{HTML_FILE}}
+    google-chrome --headless --disable-gpu --window-size=1200,800 --screenshot={{ replace(HTML_FILE, ".html", ".png") }} file://$(pwd)/{{ HTML_FILE }}
 
 [group("imgs")]
 html-to-png-claude-code HTML_FILE="imgs/claude_code.html":
-    google-chrome --headless --disable-gpu --window-size=700,335 --screenshot={{replace(HTML_FILE, ".html", ".png")}} file://$(pwd)/{{HTML_FILE}}
+    google-chrome --headless --disable-gpu --window-size=700,335 --screenshot={{ replace(HTML_FILE, ".html", ".png") }} file://$(pwd)/{{ HTML_FILE }}
 
 compile_and_open:
     just slides && open *.pdf
