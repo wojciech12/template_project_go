@@ -41,6 +41,7 @@ If you find this useful, please consider starring this GitHub repository. If som
 - [golangci-lint](https://github.com/golangci/golangci-lint)
 - [gh](https://cli.github.com/)
 - [eza](https://github.com/eza-community/eza)
+- [ripgrep](https://github.com/BurntSushi/ripgrep)
 - node with [nvm](https://github.com/nvm-sh/nvm) - running prettier
 - [uv](https://docs.astral.sh/uv/) - claude hooks, scripts, and tools
 - [ruff](https://docs.astral.sh/ruff/installation/) - fmt for Python (default language for scripts)
