@@ -206,6 +206,36 @@ Once the task is complete or a session is too-long:
 
 <!-- _class: lead -->
 
+## subagents
+
+```markdown
+---
+name: your-sub-agent-name
+description: Description of when this subagent should be invoked
+tools: tool1, tool2, tool3  # Optional - inherits all tools if omitted
+model: sonnet  # Optional - specify model alias or 'inherit'
+---
+
+Your subagent's system prompt goes here.
+```
+
+---
+
+<!-- _class: lead -->
+
+## subagents
+
+Examples:
+
+- Frontend
+- Code Reviewer
+- Project Mgmt
+- Various tools to manage them, e.g., [ccagents](https://github.com/Bitropy/ccagents)
+
+---
+
+<!-- _class: lead -->
+
 ## Prompt for Claude Code
 
 - The CLEAR Framework
