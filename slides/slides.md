@@ -111,10 +111,27 @@ For Go-specific context, include:
 
 ## Plan.md
 
-- Keep the model on the track
-- When it double, create it
-- MUST for anything more complicated
-- Benefits for the model
+- From scratch or based your input/initial plan.
+- Keep the model on track.
+- When in doubt, create it.
+- A must for anything more complicated.
+- Benefits for the model.
+
+---
+
+<!-- _class: lead -->
+
+## Plan.md
+
+1. Improve the Plan.md
+2. Ask Claude to open a PR for step 1
+3. Ask Claude to do the implementation
+4. Iterate with Claude
+5. Ask Claude to update docs/CLAUDE.md
+6. Mark ✅ completed tasks
+7. Squash & Merge
+8. Clear context
+9. Repeat
 
 ---
 
