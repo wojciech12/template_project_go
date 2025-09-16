@@ -111,11 +111,11 @@ For Go-specific context, include:
 
 ## Plan.md
 
-- From scratch or based your input/initial plan.
 - Keep the model on track.
 - When in doubt, create it.
 - A must for anything more complicated.
 - Benefits for the model.
+- From scratch or based your input/initial plan.
 
 ---
 
@@ -126,7 +126,7 @@ For Go-specific context, include:
 1. Improve the Plan.md
 2. Ask Claude to open a PR for step 1
 3. Ask Claude to do the implementation
-4. Iterate with Claude
+4. Iterate with Claude on code/plan/...
 5. Ask Claude to update docs/CLAUDE.md
 6. Mark ✅ completed tasks
 7. Squash & Merge
@@ -171,11 +171,13 @@ Memory (`.claude/memory`):
 
 <!-- _class: lead -->
 
-## Repository
+## Code structure / Repository
 
-- Modular design
-- Vertical project structure
-- `CLAUDE.md` files in subfolders
+1. Vertical code structure ☀️
+2. Modular design
+3. Layered architecture / numerous dependencies 💀
+
+`CLAUDE.md` in subfolders.
 
 ---
 
