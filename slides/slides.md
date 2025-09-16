@@ -335,7 +335,7 @@ I typically use [Claude hooks](https://github.com/wojciech12/template_project_go
 
 ## Accelerating Go Development
 
-- Continuous Process
+- A Continuous Process
 
 ---
 
@@ -343,8 +343,8 @@ I typically use [Claude hooks](https://github.com/wojciech12/template_project_go
 
 ## Accelerating Go Development
 
-- Share the learnings with your team
-- At Unoperate, we run AI retrospectives weekly
+- Share what you have learned with your team.
+- At Unoperate, we run AI retrospectives weekly.
 
 ---
 
