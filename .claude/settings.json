@@ -7,7 +7,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "python3 ./.claude/hooks/pre_tool_use_action_router.py"
+            "command": "python3 $(git rev-parse --show-toplevel)/.claude/hooks/pre_tool_use_action_router.py"
           }
         ]
       }
@@ -18,7 +18,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "python3 .claude/hooks/text_to_speech_piper.py 'Claude waits for your input'"
+            "command": "python3 $(git rev-parse --show-toplevel)/.claude/hooks/text_to_speech_piper.py 'Claude waits for your input'"
           },
           {
             "type": "command",
@@ -33,7 +33,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "python3 .claude/hooks/text_to_speech_piper.py 'Claude finished its work'"
+            "command": "python3 $(git rev-parse --show-toplevel)/.claude/hooks/text_to_speech_piper.py 'Claude finished its work'"
           },
           {
             "type": "command",
