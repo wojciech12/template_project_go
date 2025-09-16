@@ -298,7 +298,7 @@ Will help:
 
 <!-- _class: lead -->
 
-## Code as a part of prompt
+## Code as part of the prompt
 
 - Write your test first (~TDD)
 - Define interfaces between components
