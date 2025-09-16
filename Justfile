@@ -28,3 +28,4 @@ prettier:
 [group("claude")]
 fmt_tools:
     ruff format .claude/*/*.py
+    ruff format .tools/*.py
