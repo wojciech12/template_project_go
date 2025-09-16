@@ -239,7 +239,7 @@ Examples:
 ## Prompt for Claude Code
 
 - The CO-STAR and CLEAR Framework
-- Keywords, e.g., exactly, detaile, [...](https://github.com/wojciech12/notes_ai_for_software_engineering/blob/main/PROMPTS.md)
+- Keywords, e.g., exactly, detailed, [...](https://github.com/wojciech12/notes_ai_for_software_engineering/blob/main/PROMPTS.md)
 - Role-task format pattern
 
   ```
