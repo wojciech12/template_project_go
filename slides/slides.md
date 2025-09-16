@@ -212,8 +212,8 @@ Once the task is complete or a session is too-long:
 ---
 name: your-sub-agent-name
 description: Description of when this subagent should be invoked
-tools: tool1, tool2, tool3  # Optional - inherits all tools if omitted
-model: sonnet  # Optional - specify model alias or 'inherit'
+tools: tool1, tool2, tool3 # Optional - inherits all tools if omitted
+model: sonnet # Optional - specify model alias or 'inherit'
 ---
 
 Your subagent's system prompt goes here.
@@ -293,6 +293,15 @@ Will help:
 - **`ESC`**: Provide additional information.
 - **`ESC` `ESC`**: Cancel the current action.
 - **Planning Mode**: Deconstruct complex tasks into smaller steps.
+
+---
+
+<!-- _class: lead -->
+
+## Code as a part of prompt
+
+- Write your test first (~TDD)
+- Define interfaces between components
 
 ---
 
