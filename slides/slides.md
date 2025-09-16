@@ -238,7 +238,7 @@ Examples:
 
 ## Prompt for Claude Code
 
-- The CLEAR Framework
+- The CO-STAR and CLEAR Framework
 - Keywords, e.g., exactly, detaile, [...](https://github.com/wojciech12/notes_ai_for_software_engineering/blob/main/PROMPTS.md)
 - Role-task format pattern
 
@@ -251,13 +251,26 @@ Examples:
 
 <!-- _class: lead -->
 
+## The CO-STAR Framework
+
+- **C**ontext: Background information
+- **O**bjective: The purpose or goal
+- **S**tyle: Formal, informal, etc.
+- **T**one: Friendly, authoritative
+- **A**udience: for whom it is
+- **R**esponse Format: output
+
+---
+
+<!-- _class: lead -->
+
 ## The CLEAR Framework
 
-- Context: Background information
-- Limitations: Constraints and boundaries
-- Examples: Sample inputs/outputs
-- Action: Specific task to perform
-- Result: Expected deliverable format
+- **C**oncise: Be brief and to the point.
+- **L**ogical: Structure your prompt in a logical order.
+- **E**xplicit: State exactly what you want.
+- **A**daptive: Frame the prompt to be adaptable to different scenarios.
+- **R**ole-based: Assign a role to the AI.
 
 ---
 
@@ -284,7 +297,6 @@ Will help:
 ---
 
 <!-- _class: lead -->
-<!-- _class: lead -->
 
 ## Claude Code Tools
 
@@ -300,7 +312,7 @@ Will help:
 
 How I approach it:
 
-1. **CLI Tools (`gh`, `eza`, ...):** Fast and efficient for common tasks.
+1. **CLI Tools (`gh`,`rg`, `eza`, ...):** Fast and efficient for common tasks.
 2. **Python Scripts (with `uv`)**: Best for automation and complex logic.
 3. **Mcp** few use cases.
 
@@ -332,7 +344,7 @@ I typically use [Claude hooks](https://github.com/wojciech12/template_project_go
 ## Accelerating Go Development
 
 - Share the learnings with your team
-- e.g., AI retrospectives
+- At Unoperate, we run AI retrospectives weekly
 
 ---
 
@@ -340,7 +352,7 @@ I typically use [Claude hooks](https://github.com/wojciech12/template_project_go
 
 ## Accelerating Go Development
 
-- More verticals in your app, the easier for the model
+- The more verticals your app has, the easier it is for Claude.
 
 ---
 
@@ -366,7 +378,7 @@ I typically use [Claude hooks](https://github.com/wojciech12/template_project_go
 
 # Thank you
 
-![width:200px](imgs/gofersyrenka.png)
+![width:400px](imgs/unoperate-logo.png)
 
 ---
 
@@ -382,4 +394,4 @@ I typically use [Claude hooks](https://github.com/wojciech12/template_project_go
 
 - [Prompt Best Practices](https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/be-clear-and-direct)
 - [Prompt library](https://docs.anthropic.com/en/resources/prompt-library/corporate-clairvoyant)
-- [CO-STAR](https://towardsdatascience.com/how-i-won-singapores-gpt-4-prompt-engineering-competition-34c195a93d41/)
+- [CO-STAR](https://towardsdatascience.com/how-i-won-singapores-gpt-4-prompt-engineering-competition-34c195a93d41/)- [Article on prompting](https://library.westpoint.edu/GenAI/prompting)
